@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;  /* Google Font */
+    background-color: rgb(0,0,0);
+    display: flex;
+    gap: 9px;
+}
+
+
+.sidebar ,.main{
+    margin-top: 9px;
+    height: 97.5%;
+}
+
+/*! Sidebar */
+.sidebar {
+    position: fixed;
+    width: 288px;
+    margin-left: 9px;
+    display: grid;
+    grid-template-rows: 1fr 3.7fr;
+}
+
+.upbar,.downbar{
+    background-color: rgb(18, 18, 18);
+    padding: 8px 12px;
+}
+
+/*$ Sidebar - Top */
+.upbar{
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;  font-weight: 500;
+    font-size: 20px;
+}
+.upbar .option { 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    height: 30%;
+    text-decoration: none; /* removes the default underline of links */
+    color: inherit; /* makes the link text inherit the color of its parent */
+}
+.upbar .option:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* changes the background color when hovered */
+}
+
+.upbar .logo{
+    width: 30px; /* adjust as needed */
+    height: 30px; /* adjust as needed */
+}
+
+/*$ Sidebar - Bottom */
+.downbar {
+    display: flex; /* Add this line */
+    justify-content: space-between; /* Add this line if you want them to be at the start and end of the downbar */
+    padding: 0;
+}
+
+.downbar .library{
+    display: flex;
+    height: 14%;
+    width: 100%;
+    padding: 10px;
+    border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px -5px rgb(0, 0, 0);
+}
+
+.downbar .library .option{
+    display: flex;
+    gap: 10px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;  font-weight: 500;
+    text-decoration: none;
+    height : 20px; 
+    align-items: center; 
+    font-size: 20px;
+}
+
+.downbar .library #search {
+    margin-left: 0px;
+    border-radius: 50%; /* Make the border a perfect circle */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    padding: 10px; /* Add some padding to create space around the content */
+}
+
+.downbar .library .option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.downbar .library .logo{
+    width: 25px; /* adjust as needed */
+    height: 25px; /* adjust as needed */
+}
+
+/*! MAIN */
+.main {
+    position: fixed;
+    background-color: rgb(18, 18, 18);
+    margin-left: 305px;
+    width: calc(99% - 305px);
+}
