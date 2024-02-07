@@ -1,28 +1,23 @@
 *{
-    padding: 0;
-    margin: 0;
+    padding: 0; margin: 0;
     border-radius: 10px;
 }
 body {
     font-family: 'Montserrat', sans-serif;  /* Google Font */
     background-color: rgb(0,0,0);
-    display: flex;
-    gap: 9px;
 }
-
 
 .sidebar ,.main{
-    margin-top: 9px;
-    height: 97.5%;
+    margin-top: 9px; height: 97.5vh;
 }
 
-/*! Sidebar */
+/*! sidebar */
 .sidebar {
     position: fixed;
     width: 288px;
     margin-left: 9px;
     display: grid;
-    grid-template-rows: 1fr 3.7fr;
+    grid-template-rows: auto 1fr;
 }
 
 .upbar,.downbar{
@@ -30,8 +25,9 @@ body {
     padding: 8px 12px;
 }
 
-/*$ Sidebar - Top */
+/*@upbar*/
 .upbar{
+    grid-row: 1;
     margin-bottom: 8px;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;  font-weight: 500;
@@ -45,64 +41,131 @@ body {
     height: 30%;
     text-decoration: none; /* removes the default underline of links */
     color: inherit; /* makes the link text inherit the color of its parent */
+    border-radius: 30px
 }
 .upbar .option:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* changes the background color when hovered */
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-duration: 1s;
 }
 
 .upbar .logo{
-    width: 30px; /* adjust as needed */
-    height: 30px; /* adjust as needed */
+    width: 30px; height: 30px; 
 }
 
-/*$ Sidebar - Bottom */
+/*@ downbar*/
 .downbar {
-    display: flex; /* Add this line */
-    justify-content: space-between; /* Add this line if you want them to be at the start and end of the downbar */
+    grid-row: 2;
+    grid-template-rows: 1fr 4fr;
     padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
 }
-
+    /*#library*/
 .downbar .library{
-    display: flex;
-    height: 14%;
     width: 100%;
-    padding: 10px;
+    grid-row: 1;
+    padding-left: 10px;
     border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;
     justify-content: space-between;
     box-shadow: 0 20px 20px -5px rgb(0, 0, 0);
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    margin:0;
 }
 
-.downbar .library .option{
+.downbar .library .add-library{
+    display: flex;
+    grid-row: 1/2;
+}
+
+.downbar .library .add-library .option{
     display: flex;
     gap: 10px;
     padding: 8px 12px;
     margin-top: 8px;
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;  font-weight: 500;
+    font-family: 'Montserrat', sans-serif;  font-weight: 700;
     text-decoration: none;
     height : 20px; 
     align-items: center; 
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.downbar .library #search {
-    margin-left: 0px;
+.downbar .library .add-library #library{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.downbar .library .add-library #plus {
+    width: 20px; 
+    margin-left: 30px;
     border-radius: 50%; /* Make the border a perfect circle */
-    align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
     padding: 10px; /* Add some padding to create space around the content */
 }
 
 .downbar .library .option:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    transition-duration: 0.5s;
+}
+.downbar .library .add-library .logo{
+    width: 25px; height: 25px; 
 }
 
-.downbar .library .logo{
-    width: 25px; /* adjust as needed */
-    height: 25px; /* adjust as needed */
+.downbar .library .filter{
+    display: flex;
+}
+.downbar .library .filter .option{
+    text-decoration: none;
+    color: #ffffff;
+    padding : 10px;
+    font: 400 12px 'Montserrat', sans-serif;
+    background-color: #2a2a2a;
+    margin: 10px;
+    border-radius: 80px;
+}
+.downbar .library .filter .option:hover{
+    background-color: rgb(30, 215, 96,0.5);
+    transition-duration: 0.5s;
+    
+}
+ /*#playlists*/
+ .playlists {
+    grid-row: 2;
+    margin-left: 6px;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 10px; /* Adds space between the grid items */
+    overflow-y: auto; /* Enables vertical scrolling */
+    height: 55.4vh; /* Set a specific height */
 }
 
-/*! MAIN */
+.playlist{
+    border: 2px solid red;
+    height: 64px; /* Sets the height of each playlist to 64px */
+}
+
+/* This applies to the scrollbar in .playlists */
+.playlists::-webkit-scrollbar {
+    width: 10px;
+}
+
+.playlists::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.playlists::-webkit-scrollbar-thumb {
+    background: transparent;
+    height: 20px; /* Set the height of the scrollbar thumb */
+    border-radius: 20px;  
+}
+
+.playlists:hover::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/*! main */
 .main {
     position: fixed;
     background-color: rgb(18, 18, 18);
