@@ -1,15 +1,12 @@
 *{
     padding: 0; margin: 0;
-    border-radius: 10px;
-}
+    border-radius: 10px;}
 body {
     font-family: 'Montserrat', sans-serif;  /* Google Font */
-    background-color: rgb(0,0,0);
-}
+    background-color: rgb(0,0,0);}
 
 .sidebar ,.main{
-    margin-top: 9px; height: 97.5vh;
-}
+    margin-top: 9px; height: 86vh;}
 
 /*! sidebar */
 .sidebar {
@@ -17,13 +14,11 @@ body {
     width: 288px;
     margin-left: 9px;
     display: grid;
-    grid-template-rows: auto 1fr;
-}
+    grid-template-rows: auto 1fr;}
 
 .upbar,.downbar{
     background-color: rgb(18, 18, 18);
-    padding: 8px 12px;
-}
+    padding: 8px 12px;}
 
 /*@upbar*/
 .upbar{
@@ -31,52 +26,45 @@ body {
     margin-bottom: 8px;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;  font-weight: 500;
-    font-size: 20px;
-}
+    font-size: 20px;}
 .upbar .option { 
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 10px;
-    height: 30%;
+
     text-decoration: none; /* removes the default underline of links */
     color: inherit; /* makes the link text inherit the color of its parent */
-    border-radius: 30px
-}
+    border-radius: 30px}
 .upbar .option:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transition-duration: 1s;
-}
+    transition-duration: 1s;}
 
 .upbar .logo{
-    width: 30px; height: 30px; 
-}
+    width: 30px; height: 30px; }
 
 /*@ downbar*/
 .downbar {
     grid-row: 2;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 1fr;
     padding: 0;
     display: grid;
-    grid-template-rows: auto 1fr;
-}
+    grid-template-rows: auto 1fr;}
     /*#library*/
 .downbar .library{
-    width: 100%;
+
     grid-row: 1;
     padding-left: 10px;
     border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;
     justify-content: space-between;
-    box-shadow: 0 20px 20px -5px rgb(0, 0, 0);
+    box-shadow: 0 20px 20px 5px rgb(0, 0, 0);
     display:grid;
     grid-template-rows: 1fr 1fr;
-    margin:0;
-}
+    margin:0;}
 
 .downbar .library .add-library{
     display: flex;
-    grid-row: 1/2;
-}
+    grid-row: 1/2;}
 
 .downbar .library .add-library .option{
     display: flex;
@@ -88,29 +76,24 @@ body {
     text-decoration: none;
     height : 20px; 
     align-items: center; 
-    font-size: 15px;
-}
+    font-size: 15px;}
 
 .downbar .library .add-library #library{
     padding-top: 10px;
-    padding-bottom: 10px;
-}
+    padding-bottom: 10px;}
 
 .downbar .library .add-library #plus {
     width: 20px; 
     margin-left: 30px;
-    border-radius: 50%; /* Make the border a perfect circle */
+    border-radius: 50%; 
     justify-content: center; /* Center the content horizontally */
-    padding: 10px; /* Add some padding to create space around the content */
-}
+    padding: 10px; }
 
 .downbar .library .option:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transition-duration: 0.5s;
-}
+    transition-duration: 0.5s;}
 .downbar .library .add-library .logo{
-    width: 25px; height: 25px; 
-}
+    width: 25px; height: 25px; }
 
 .downbar .library .filter{
     display: flex;
@@ -126,42 +109,76 @@ body {
 }
 .downbar .library .filter .option:hover{
     background-color: rgb(30, 215, 96,0.5);
+    transform: scale(1.2);
     transition-duration: 0.5s;
     
 }
  /*#playlists*/
- .playlists {
+.downbar .playlists {
     grid-row: 2;
-    margin-left: 6px;
+    margin-left: 10px;
     box-sizing: border-box;
     display: grid;
-    grid-gap: 10px; /* Adds space between the grid items */
-    overflow-y: auto; /* Enables vertical scrolling */
-    height: 55.4vh; /* Set a specific height */
+    grid-gap: 10px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    height: 47.4vh;
 }
 
-.playlist{
-    border: 2px solid red;
-    height: 64px; /* Sets the height of each playlist to 64px */
+.downbar .playlist{
+    height: 74px;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 
 /* This applies to the scrollbar in .playlists */
-.playlists::-webkit-scrollbar {
+.downbar .playlists::-webkit-scrollbar {
     width: 10px;
 }
 
-.playlists::-webkit-scrollbar-track {
+.downbar .playlists::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.playlists::-webkit-scrollbar-thumb {
+.downbar .playlists::-webkit-scrollbar-thumb {
     background: transparent;
-    height: 20px; /* Set the height of the scrollbar thumb */
-    border-radius: 20px;  
+    border-radius: 20px;
 }
 
-.playlists:hover::-webkit-scrollbar-thumb {
+.downbar .playlists:hover::-webkit-scrollbar-thumb {
     background: #888;
+}
+
+/*$playlists*/
+.downbar .playlist button {
+    display: grid;
+    grid-template-columns: 60px 1fr; /* adjust as necessary */
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.downbar .playlist button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.downbar .playlist button:hover {
+    background-color: rgb(26, 26, 26);
+    transition-duration: 0.5s;
+    
 }
 
 
@@ -171,4 +188,80 @@ body {
     background-color: rgb(18, 18, 18);
     margin-left: 305px;
     width: calc(99% - 305px);
+    display: grid; /* Add this line to make .main a grid container */
+    grid-template-rows: auto 1fr;
+
+}
+
+/*$ nav bar  */
+.main .nav{
+    grid-row: 1;
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-color: rgba(2, 35, 81, 0.379);
+    border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;
+    
+}
+
+.main .nav1{ 
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-top: 10px;}
+
+.main .nav1 .left{ margin-left: 20px; }
+.main .nav1 .right{ margin-right: 20px; }
+
+.main .nav1 .navbutton{
+    text-decoration: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.main .nav1 .navbutton img {
+    text-decoration: none;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(0, 0, 0,0.8);
+    border-radius: 50%;
+    border: 4px solid rgba(11, 7, 7, 0.5);
+}
+.main .nav1 .navbutton img:hover {
+    height: 35px;
+    width: 35px;
+    transition-duration: 0.5s;
+}
+
+.main .nav2 {
+    display: flex;
+    flex-wrap: wrap; /* This will allow the items to wrap onto the next line if there isn't enough space on the current line */
+    padding: 20px;
+    justify-content: flex-start; /* This will align the items to the start of the container */
+}
+
+.main .nav2 .option{
+    text-decoration: none;
+    color: #ffffff;
+    padding : 10px;
+    font: 500 15px 'Montserrat', sans-serif;
+    background-color: rgba(84, 83, 83, 0.5); 
+    margin: -10px 10px -5px 10px;
+    border-radius: 80px;
+    text-align:center;
+    transition: all 0.5s ease;
+    flex: 0 1 30px; 
+
+}
+
+.main .nav2 .option:hover{
+    background-color: rgb(36, 36, 36);
+    transform: scale(1.3);
+}
+
+/*$ body  */
+.main .body{
+    grid-row: 2;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    width: auto;
 }
