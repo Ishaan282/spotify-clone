@@ -10,3 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 console.log('smort.js loaded');
+
+
+
+document.querySelector('.play').addEventListener('click', function() {
+    var input = document.querySelector('.right input');
+    var currentValue = parseInt(input.value, 10);
+    currentValue += 10; // Change this value to control how much the input should move forward
+    if (currentValue > 100) currentValue = 100; // Ensure the value doesn't exceed the maximum
+    input.value = currentValue;
+});
