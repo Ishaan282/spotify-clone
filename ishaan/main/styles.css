@@ -551,3 +551,52 @@ body {
     border-radius: 50%;
     cursor: pointer;
 }
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    background: white;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: green;
+    margin-top: -3px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-moz-range-track {
+    height: 10px;
+    background: white;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: green;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: green;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: white;
+}
