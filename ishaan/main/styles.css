@@ -1,9 +1,13 @@
 *{
     padding: 0; margin: 0;
-    border-radius: 10px;}
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+color: white;}
 body {
     font-family: 'Montserrat', sans-serif;  /* Google Font */
-    background-color: rgb(0,0,0);}
+    background-color: rgb(0,0,0);
+    height: 100%;
+    width: 100%;}
 
 .sidebar ,.main{
     margin-top: 9px; height: 86vh;}
@@ -32,13 +36,16 @@ body {
     align-items: center;
     gap: 15px;
     padding: 10px;
-
     text-decoration: none; /* removes the default underline of links */
     color: inherit; /* makes the link text inherit the color of its parent */
-    border-radius: 30px}
+    border-radius: 30px;
+
+    opacity:0.7;
+}
 .upbar .option:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transition-duration: 1s;}
+    transition-duration: 0.5s;
+    opacity:1;
+}
 
 .upbar .logo{
     width: 30px; height: 30px; }
@@ -49,7 +56,9 @@ body {
     grid-template-rows: auto 1fr;
     padding: 0;
     display: grid;
-    grid-template-rows: auto 1fr;}
+    grid-template-rows: auto 1fr;
+    height: calc(79vh - 10% - 9px);
+}
     /*#library*/
 .downbar .library{
 
@@ -76,7 +85,8 @@ body {
     text-decoration: none;
     height : 20px; 
     align-items: center; 
-    font-size: 15px;}
+    font-size: 15px;
+    opacity:0.7;}
 
 .downbar .library .add-library #library{
     padding-top: 10px;
@@ -90,8 +100,9 @@ body {
     padding: 10px; }
 
 .downbar .library .option:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transition-duration: 0.5s;}
+    background-color: rgba(99, 4, 4, 0.1);
+    transition-duration: 0.5s;
+    opacity:1;}
 .downbar .library .add-library .logo{
     width: 25px; height: 25px; }
 
@@ -102,7 +113,7 @@ body {
     text-decoration: none;
     color: #ffffff;
     padding : 10px;
-    font: 400 12px 'Montserrat', sans-serif;
+    font: 600 12px 'Montserrat', sans-serif;
     background-color: #2a2a2a;
     margin: 10px;
     border-radius: 80px;
@@ -122,14 +133,12 @@ body {
     grid-gap: 10px;
     overflow-y: auto; 
     overflow-x: hidden;
-    height: 47.4vh;
 }
 
 .downbar .playlist{
-    height: 74px;
+    height: 20%;
     width: 95%;
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -152,6 +161,11 @@ body {
 }
 
 /*$playlists*/
+.downbar .playlist{
+    height: 20%;
+    width: 95%;
+    max-height: 500px;
+}
 .downbar .playlist button {
     display: grid;
     grid-template-columns: 60px 1fr; /* adjust as necessary */
@@ -164,11 +178,7 @@ body {
     color: white;
     text-align: left;
     cursor: pointer;
-    width: 100%;
-    height: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
+    font: 600 15px 'Montserrat', sans-serif;
 }
 .downbar .playlist button img {
     width: 100%;
@@ -181,12 +191,11 @@ body {
     
 }
 
-
 /*! main */
 .main {
     position: fixed;
     background-color: rgb(18, 18, 18);
-    margin-left: 305px;
+    left: 305px;
     width: calc(99% - 305px);
     display: grid; /* Add this line to make .main a grid container */
     grid-template-rows: auto 1fr;
@@ -263,5 +272,179 @@ body {
     grid-row: 2;
     overflow-y: auto; 
     overflow-x: hidden;
-   
+}
+
+.main .body .playlists{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding-left: 20px; padding-right: 10px;
+
+}
+
+.main .body .playlists{
+    margin: 15px;
+}
+
+.main .body .playlists .button{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    padding: 19px;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    color: white; 
+    text-align: left;
+    cursor: pointer;
+    width: 200px; height: 250px;
+    font: 600 18px 'Montserrat', sans-serif;
+    background-color: rgb(40, 40, 40,0.3);
+    transition-duration: 0.5s;
+    position: relative;
+    margin-top: 15px; margin-bottom: 15px;
+}
+.main .body span{
+    margin-top: 10px;
+}
+
+.main .body .playlists .button:hover {
+    background-color: rgb(40, 40, 40,0.6);
+    transition-duration: 0.5s;
+}
+
+.main .body  .button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 65%;
+        opacity: 0;
+    }
+    50%, 100% {
+        top: 65%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        top: 65%;
+        opacity: 1;
+    }
+    100% {
+        top: 70%;
+        opacity: 0;
+    }
+}
+
+.main .body .playlists .button::after {
+    content: "▶";
+    position: absolute;
+    top: 70%; /* set initial top to 75% */
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 2px solid rgb(31, 215, 31);
+    background-color: rgb(31, 215, 31);
+    border-radius: 50%;
+    opacity: 0; /* set initial opacity to 0 */
+    box-shadow: 0 20px 30px rgba(0, 0, 0,0.8);
+    animation: slideDown 0.6s forwards; /* apply the slideDown animation */
+}
+
+.main .body .playlists .button:hover::after {
+    animation: slideUp 0.6s forwards; /* apply the slideUp animation */
+}
+
+.main .body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main .body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main .body::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 20px;
+}
+
+.main .body:hover::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/*! play bar  */
+.bottom{
+    display: grid;
+    grid-template-columns: 29% 1fr 0.63fr;
+    grid-gap: 4px;
+    position: fixed;
+    top: 87vh;
+    height: 12%;
+    width: 98%;
+    padding: 5px;
+    bottom: 0;
+}
+
+.bottom .left{
+    display: flex;
+
+    justify-items: start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.bottom .left .image{
+    width: 55px;
+    height: 55px;
+}
+.bottom .left .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+
+}
+
+.bottom .left .text{
+    font: 600 15px 'Montserrat', sans-serif;
+    width: 70px;
+    height: 40px;
+}
+
+#artist{
+    opacity: 0.7;
+    font: 400 15px 'Montserrat', sans-serif;
+}
+
+.bottom .left .like{
+    width: 25px;
+    height: 25px;
+}
+
+.bottom .left .like img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom .middle{
+    border: 2px solid blue;
+}
+
+.bottom .right{
+    border: 2px solid yellow;
 }
