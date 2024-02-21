@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var playButton = document.querySelector('.bottom .middle .up .play');
     var playButtonImg = playButton.querySelector('img');
     var rightInput = document.querySelector('.down input');
+    var timeDisplay = document.querySelector('.down .time1');
     var intervalId = null;
 
     playButton.addEventListener('click', function() {
@@ -30,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     playButtonImg.src = './main/img/icon/icons8-play-96.png'; // Change the pause button back to the play button
                 }
                 rightInput.value = currentValue.toFixed(4);
+
+                // Update the time display
+                var minutes = Math.floor(currentValue / (100/3));
+                var seconds = Math.floor((currentValue / (100/3) - minutes) * 60);
+                timeDisplay.textContent = minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
             }, 1000); // Update the slider every second
         } else {
             playButtonImg.src = './main/img/icon/icons8-play-96.png';
