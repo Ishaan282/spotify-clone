@@ -398,6 +398,7 @@ body {
     bottom: 0;
 }
 
+    /*#left*/
 .bottom .left{
     display: flex;
 
@@ -405,6 +406,9 @@ body {
     align-items: center;
     gap: 10px;
     padding-left: 20px;
+}
+.bottom .left .👈{
+    cursor:pointer;
 }
 
 .bottom .left .image{
@@ -416,6 +420,10 @@ body {
     height: 100%;
     border-radius: 4px;
     object-fit: cover;
+}
+.bottom .left .image img:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
 }
 
 .bottom .left .text{
@@ -431,7 +439,6 @@ body {
 .bottom .left .text span:hover{
     text-decoration: underline;
 }
-
 
 .bottom .left .like{
     width: 25px;
@@ -449,10 +456,12 @@ body {
     object-fit: cover;
 }
 
+    /*#middle*/
 .bottom .middle{
     border: 2px solid blue;
 }
 
+    /*#right*/
 .bottom .right{
     border: 2px solid yellow;
 }
