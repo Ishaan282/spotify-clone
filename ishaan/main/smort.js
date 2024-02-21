@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (currentValue > 100) {
                     currentValue = 0; // Reset to the beginning when it reaches the end
                     clearInterval(intervalId); // Stop when it reaches the end
+                    playButtonImg.src = './main/img/icon/icons8-play-96.png'; // Change the pause button back to the play button
                 }
                 rightInput.value = currentValue;
             }, 100); // Change this value to control the speed of the movement
