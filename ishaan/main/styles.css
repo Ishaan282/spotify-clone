@@ -460,15 +460,14 @@ body {
 
     /*#middle*/
 .bottom .middle{
-    border: 2px solid blue;
+
 }
 
 .bottom .middle .up{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border: 2px solid green;
+    gap: 30px;
     margin-top: 5px; margin-bottom: 5px;
 
 }
@@ -477,8 +476,7 @@ body {
     border:0;
     cursor:pointer;
     opacity: 0.7;
-    height: 25px; width: 25px;
-    border: 2px solid red;
+    height: 20px; width: 20px;
     cursor: pointer;
 }
 .bottom .middle .👆:hover{
@@ -492,6 +490,10 @@ body {
 .bottom .middle .up .play{
     width: 35px;
     height: 35px;
+    opacity: 1;
+    border: 2px solid rgba(255, 249, 249, 0.132);
+    border-radius: 50%;
+    background-color:rgba(255, 249, 249, 0.132);
 }
 .bottom .middle .up .play img{
     width: 100%;
@@ -500,15 +502,13 @@ body {
 }
 
 .bottom .middle .down{
-
-    border: 2px solid rgb(128, 0, 0);
     display: flex;
+    align-items: center;
 }
 
 .bottom .middle .👇{
     background: none;
     height: 25px; width: 45px;
-    border: 2px solid pink;
     cursor: pointer;
 }
 .bottom .middle .bar{
@@ -522,4 +522,7 @@ body {
     /*#right*/
 .bottom .right{
     border: 2px solid yellow;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
