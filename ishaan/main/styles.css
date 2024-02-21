@@ -390,7 +390,7 @@ body {
 /*! play bar  */
 .bottom{
     display: grid;
-    grid-template-columns: 29% 1fr 0.63fr;
+    grid-template-columns: 29% 1fr 27%;
     grid-gap: 4px;
     position: fixed;
     top: 86vh;
