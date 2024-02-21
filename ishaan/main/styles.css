@@ -416,23 +416,31 @@ body {
     height: 100%;
     border-radius: 4px;
     object-fit: cover;
-
 }
 
 .bottom .left .text{
     font: 600 15px 'Montserrat', sans-serif;
     width: 70px;
     height: 40px;
+    cursor: pointer;
 }
-
 #artist{
     opacity: 0.7;
     font: 400 15px 'Montserrat', sans-serif;
 }
+.bottom .left .text span:hover{
+    text-decoration: underline;
+}
+
 
 .bottom .left .like{
     width: 25px;
     height: 25px;
+}
+.bottom .left .like:hover{
+    transform: scale(1.3);
+    transition-duration: 0.5s;
+
 }
 
 .bottom .left .like img{
