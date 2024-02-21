@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (playButtonImg.src.endsWith('icons8-play-96.png')) {
             playButtonImg.src = './main/img/icon/icons8-pause-60.png';
             intervalId = setInterval(function() {
-                var currentValue = parseInt(rightInput.value, 10);
-                currentValue += 1; // Change this value to control how much the input should move forward
+                var currentValue = parseFloat(rightInput.value);
+                currentValue += 0.5556; // Change this value to control how much the input should move forward
                 if (currentValue > 100) {
                     currentValue = 0; // Reset to the beginning when it reaches the end
                     clearInterval(intervalId); // Stop when it reaches the end
                     playButtonImg.src = './main/img/icon/icons8-play-96.png'; // Change the pause button back to the play button
                 }
-                rightInput.value = currentValue;
-            }, 100); // Change this value to control the speed of the movement
+                rightInput.value = currentValue.toFixed(4);
+            }, 1000); // Update the slider every second
         } else {
             playButtonImg.src = './main/img/icon/icons8-play-96.png';
             clearInterval(intervalId); // Stop the movement when the button is clicked again
