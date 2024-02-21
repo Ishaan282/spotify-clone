@@ -9,8 +9,8 @@ body {
     height: 100%;
     width: 100%;}
 
-.sidebar ,.main{
-    margin-top: 9px; height: 85vh;
+.sidebar .main{
+    margin-top: 9px;
 }
 
 /*! sidebar */
@@ -197,7 +197,7 @@ body {
     position: fixed;
     background-color: rgb(18, 18, 18);
     left: 305px;
-    width: calc(99% - 305px);
+    width: calc(99% - 305px); height: 85%;
     display: grid; /* Add this line to make .main a grid container */
     grid-template-rows: auto 1fr;
 
