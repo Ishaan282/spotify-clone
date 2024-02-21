@@ -522,9 +522,10 @@ body {
 .bottom .right{
 
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     gap: 10px;
+    padding-right: 20px;
 }
 
 .bottom .right .👉{
