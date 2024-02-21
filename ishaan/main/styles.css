@@ -10,7 +10,8 @@ body {
     width: 100%;}
 
 .sidebar ,.main{
-    margin-top: 9px; height: 86vh;}
+    margin-top: 9px; height: 85vh;
+}
 
 /*! sidebar */
 .sidebar {
@@ -57,7 +58,7 @@ body {
     padding: 0;
     display: grid;
     grid-template-rows: auto 1fr;
-    height: calc(79vh - 10% - 9px);
+    height: calc(78vh - 10% - 9px);
 }
     /*#library*/
 .downbar .library{
