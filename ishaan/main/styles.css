@@ -459,13 +459,15 @@ body {
     /*#middle*/
 .bottom .middle{
     border: 2px solid blue;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
 }
 
 .bottom .middle .up{
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 10px;
+    border: 2px solid green;
 
 }
 .bottom .middle .👆{
@@ -485,6 +487,17 @@ body {
     object-fit: cover;
 }
 
+.bottom .middle .down{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid rgb(128, 0, 0);
+}
+
+.bottom .middle .👇{
+    background: none;
+    height: 25px; width: 25px;
+}
     /*#right*/
 .bottom .right{
     border: 2px solid yellow;
