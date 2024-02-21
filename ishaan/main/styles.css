@@ -477,7 +477,6 @@ body {
     cursor:pointer;
     opacity: 0.7;
     height: 20px; width: 20px;
-    cursor: pointer;
 }
 .bottom .middle .👆:hover{
     opacity: 1;
@@ -523,6 +522,14 @@ body {
 .bottom .right{
     border: 2px solid yellow;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    margin-top: 5px; margin-bottom: 5px;
+}
+
+.bottom .right .👉{
+    background: none;
+    border:0;
+    cursor:pointer;
+    opacity: 0.7;
 }
