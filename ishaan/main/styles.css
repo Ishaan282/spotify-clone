@@ -461,7 +461,6 @@ body {
     /*#middle*/
 .bottom .middle{
     border: 2px solid blue;
-
 }
 
 .bottom .middle .up{
@@ -469,6 +468,7 @@ body {
     justify-content: center;
     gap: 10px;
     border: 2px solid green;
+    margin-top: 5px; margin-bottom: 5px;
 
 }
 .bottom .middle .👆{
@@ -478,6 +478,7 @@ body {
     opacity: 0.7;
     height: 25px; width: 25px;
     border: 2px solid red;
+    cursor: pointer;
 }
 .bottom .middle .👆:hover{
     opacity: 1;
@@ -487,6 +488,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 
 .bottom .middle .down{
 
@@ -498,12 +500,14 @@ body {
     background: none;
     height: 25px; width: 45px;
     border: 2px solid pink;
+    cursor: pointer;
 }
 .bottom .middle .bar{
     width: 430px;
 }
 .bottom .middle .bar input{
     width: 430px;
+    height: 3px;
 }
     /*#right*/
 .bottom .right{
