@@ -9,8 +9,9 @@ body {
     height: 100%;
     width: 100%;}
 
-.sidebar .main{
+.sidebar, .main{
     margin-top: 9px;
+    height: 85vh;
 }
 
 /*! sidebar */
@@ -197,7 +198,7 @@ body {
     position: fixed;
     background-color: rgb(18, 18, 18);
     left: 305px;
-    width: calc(99% - 305px); height: 85%;
+    width: calc(99% - 305px); 
     display: grid; /* Add this line to make .main a grid container */
     grid-template-rows: auto 1fr;
 
@@ -392,8 +393,8 @@ body {
     grid-template-columns: 29% 1fr 0.63fr;
     grid-gap: 4px;
     position: fixed;
-    top: 87vh;
-    height: 12%;
+    top: 86vh;
+    height: 13%;
     width: 98%;
     padding: 5px;
     bottom: 0;
@@ -495,8 +496,14 @@ body {
 
 .bottom .middle .👇{
     background: none;
-    height: 25px; width: 25px;
+    height: 25px; width: 45px;
     border: 2px solid pink;
+}
+.bottom .middle .bar{
+    width: 430px;
+}
+.bottom .middle .bar input{
+    width: 430px;
 }
     /*#right*/
 .bottom .right{
