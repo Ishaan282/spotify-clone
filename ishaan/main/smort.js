@@ -12,22 +12,27 @@
 console.log('smort.js loaded');
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var playButton = document.querySelector('.bottom .middle .up .play');
     var playButtonImg = playButton.querySelector('img');
     var rightInput = document.querySelector('.down input');
+    var intervalId = null;
 
     playButton.addEventListener('click', function() {
         if (playButtonImg.src.endsWith('icons8-play-96.png')) {
             playButtonImg.src = './main/img/icon/icons8-pause-60.png';
+            intervalId = setInterval(function() {
+                var currentValue = parseInt(rightInput.value, 10);
+                currentValue += 1; // Change this value to control how much the input should move forward
+                if (currentValue > 100) {
+                    currentValue = 0; // Reset to the beginning when it reaches the end
+                    clearInterval(intervalId); // Stop when it reaches the end
+                }
+                rightInput.value = currentValue;
+            }, 100); // Change this value to control the speed of the movement
         } else {
             playButtonImg.src = './main/img/icon/icons8-play-96.png';
+            clearInterval(intervalId); // Stop the movement when the button is clicked again
         }
-
-        var currentValue = parseInt(rightInput.value, 10);
-        currentValue += 10; // Change this value to control how much the input should move forward
-        if (currentValue > 100) currentValue = 100; // Ensure the value doesn't exceed the maximum
-        rightInput.value = currentValue;
     });
 });
