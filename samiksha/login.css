@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: black;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1px; 
+    align-items: center;
+    padding: 12px 25px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+
+.hero {
+    font-family: Arial, sans-serif;
+    background:linear-gradient(0deg, #121212, white 270%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+}
+
+.container {
+    width: 700px;
+}
+
+.login-box {
+    background-color: #000;
+    color: #fff;
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.buttons button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.buttons button:last-child {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 10px;
+    text-align: left;
+   
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-box input {
+    width: 100%;
+    font-size: 20px;
+    padding: 7px 0 7px 7px ;
+    border: 1px solid #cccc;
+    background-color: #2f2f2f;
+    border-radius: 2px;
+}
+
+.password{
+    color: #fff;
+}
+.remember-me {
+    margin-bottom: 30px;
+    margin-top: 15px;
+    text-align: left;
+}
+.login-btn a{
+    text-decoration: none;
+    color:#000;
+}
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size:25px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+   transform: scale(1.05);
+}
+
+.forgot-password {
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.no-account {
+    margin-top: 25px;
+    font-size: 15px;
+    text-decoration: none;
+}
+.no-account a{
+    text-decoration:underline;
+    color: #fff;
+}
