@@ -85,6 +85,11 @@ header {
     border: 1px solid #cccc;
     background-color: #2f2f2f;
     border-radius: 2px;
+    color:#fff;
+}
+.input-box input:focus{
+    background-color: #ffff;
+    color:#000000;
 }
 
 .password{
