@@ -1,0 +1,286 @@
+<!-- spotify clone -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify Clone</title> <!-- title-->
+        <!-- link to fonts/style-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href = "./main/styles.css"> <!-- link to css file-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./main/smort.js"></script>
+
+    </head>
+
+    <body>
+<!--!side bar-->
+        <div class="sidebar">
+    <!--$ upbar-->
+            <div class="upbar">
+                <a href="#" class="option" id = "home">
+                    <img src="./main/img/icon/icons8-home.svg" alt="Home Logo" class="logo">
+                    <span>Home</span>
+                </a>
+                <a href="#" class="option" id = "search">
+                    <img src="./main/img/icon/icons8-search.svg" alt="Search Logo" class="logo">
+                    <span>Search</span>
+                </a>
+            </div>
+
+    <!--$ downbar -->
+            <div class="downbar">
+                <div class="library">
+                    <div class="add-library">
+                        <a href="#" class="option" id="library">
+                            <img src="./main/img/icon/icons8-playlist-64.png" alt="Library Logo" class="logo">
+                            <span>Your Library</span>
+                        </a>
+                        <a href="#" class="option" id="plus">
+                            <img src="./main/img/icon/icons8-plus.svg" alt="Create Playlist Logo" class="logo">
+                        </a>
+                    </div>
+                    <div class="filter">
+                        <a href="#" class="option">
+                            <span>playlists</span>
+                        </a>
+                        <a href="#" class="option">
+                            <span>artists</span>
+                        </a>
+                        <a href="#" class="option">
+                            <span>albums</span>
+                        </a>
+                    </div>
+                </div>
+            <!--#adding playlists-->
+                <div class="playlists">
+                    <dev class="playlist" id="playlists-1">
+                        <button class ="button">
+                            <img src="./main/img/mood/liked songs.png" alt="liked-songs">
+                            <span>Liked songs</span>
+                        </button>
+                    </dev>
+                    <dev class="playlist" id="playlists-2">
+                        <button class ="button">
+                            <img src="./main/img/mood/discover weekly.png" alt="discover-weekly">
+                            <span>discover weekly</span>
+                        </button>
+                    </dev>
+                    <dev class="playlist" id="playlists-3">
+                        <button class ="button">
+                            <img src="./main/img/mood/yoh.png" alt="yoh">
+                            <span>神山 羊,</span>
+                        </button>
+                    </dev>
+                    <dev class="playlist" id="playlists-4">
+                        <button class ="button">
+                            <img src="./main/img/mood/seori.jpeg" alt="seori">
+                            <span>긴 밤</span>
+                        </button>
+                    </dev>
+                    <dev class="playlist" id="playlists-5">
+                        <button class ="button">
+                            <img src="./main/img/mood/j-pop mix.png" alt="j-pop-mix">
+                            <span>J-pop mix</span>
+                        </button>
+                    </dev>
+                    <dev class="playlist" id="playlists-6">
+                        <button class ="button">
+                            <img src="./main/img/mood/piano.png" alt="piano">
+                            <span>piano</span>
+                        </button>
+                    </dev>
+                    <div class="playlist" id="playlists-7">
+                        <button class ="button">
+                            <img src="./main/img/mood/pop mix.png" alt="pop-mix">
+                            <span>pop mix</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--! main -->
+        <div class="main" >
+        <iframe id="playlistIframe" class="fixed-iframe" src="./playlist/playlist1.html" style="display: none;"></iframe>
+            <div class="nav">
+                <div class="nav1">
+                    <div class="left">
+                        <a href="#" class="navbutton">
+                            <img src="./main/img/icon/go-back.png" alt="go-back">
+                        </a>
+                        <a href="#" class="navbutton">
+                            <img src="./main/img/icon/go-forwared.png" alt="go-forwared">
+                        </a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="navbutton" id="bell">
+                            <img src="./main/img/icon/icons8-notification-100.png" alt="notification">
+                        </a>
+                        <a href="#" class="navbutton" id = "pfp">
+                            <img src="./main/img/icon/pfp.jpg" alt="profile">
+                        </a>
+                    </div>
+                </div>
+                <div class="nav2">
+                    <a href="#" class = "option" id="all">
+                        <span>All</span>
+                    </a>
+                    <a href="#" class = "option" id = "music">
+                        <span>Music</span>
+                    </a>
+                    <a href="#" class = "option" id = "podcasts">
+                        <span>Podcasts</span>
+                    </a>
+                </div>
+            </div>
+    <!--# playlist area -->
+            <div class="body">
+                <iframe id="searchIframe" class="fixed-iframe" src="IndexSearch_Album.html" style="width: 75%; height: 66%; display: none;"></iframe>
+                <div class="playlists">
+                    <div class="playlist" id="playlist-1">
+                        <button class ="button">
+                            <img src="./main/img/mood/liked songs.png" alt="liked-songs">
+                            <span>liked-songs</span>
+                        </button>
+                    </div>
+                    <div class="playlist" id="playlist-2">
+                        <button class ="button">
+                            <img src="./main/img/mood/La vaguelette.png" alt="La vaguelette">
+                            <span>La vaguelette</span>
+                        </button>
+                    </div>
+                    <dev class="playlist" id="playlist-3">
+                        <button class ="button">
+                            <img src="./main/img/mood/yoh.png" alt="yoh">
+                            <span>神山 羊,</span>
+                        </button>
+                    </dev>
+                    <dev class="playlist" id="playlist-4">
+                        <button class ="button">
+                            <img src="./main/img/mood/seori.jpeg" alt="seori">
+                            <span>긴 밤</span>
+                        </button>
+                    </dev>
+                    <div class="playlist" id="playlist-5">
+                        <button class ="button">
+                            <img src="./main/img/mood/suzume.png" alt="suzume">
+                            <span>suzume</span>
+                        </button>
+                    </div>
+                    <div class="playlist" id="playlist-6">
+                        <button class ="button">
+                            <img src="./main/img/mood/Miseisenjo.png" alt="Miseisenjo">
+                            <span>Miseisenjo</span>
+                        </button>
+                    </div>
+                    <dev class="playlist" id="playlist-7">
+                        <button class ="button">
+                            <img src="./main/img/mood/piano.png" alt="piano">
+                            <span>piano</span>
+                        </button>
+                    </dev>
+                    <div class="playlist" id="playlist-8">
+                        <button class ="button">
+                            <img src="./main/img/mood/one republic.png" alt="one republic">
+                            <span>One Republic</span>
+                        </button>
+                    </div>
+
+                    <div class="playlist" id="playlist-9">
+                        <button class ="button">
+                            <img src="./main/img/mood/arj.png" alt="ajr">
+                            <span>ARJ</span>
+                        </button>
+                    </div>
+                    <div class="playlist" id="playlist-10">
+                        <button class ="button">
+                            <img src="./main/img/mood/imagine dragons.png" alt="imagine dragons">
+                            <span>Imagine Dragons</span>
+                        </button>
+                    </div>
+                    <dev class="playlist" id="playlist-11">
+                        <button class ="button">
+                            <img src="./main/img/mood/discover weekly.png" alt="discover-weekly">
+                            <span>discover weekly</span>
+                        </button>
+                    </dev>
+                    <div class="playlist" id="playlist-12">
+                        <button class ="button">
+                            <img src="./main/img/mood/pop mix.png" alt="pop-mix">
+                            <span>pop mix</span>
+                        </button>
+                    </div>
+                    <div class="playlist" id="playlist-13">
+                        <button class ="button">
+                            <img src="./main/img/mood/pop cover.png" alt="pop cover">
+                            <span>pop cover</span>
+                        </button>
+                    </div>
+                    <dev class="playlist" id="playlist-14">
+                        <button class ="button">
+                            <img src="./main/img/mood/j-pop mix.png" alt="j-pop-mix">
+                            <span>J-pop mix</span>
+                        </button>
+                    </dev>
+                </div>
+            </div>
+        </div>
+
+<!--! bottom -->
+        <div class="bottom">
+            <div class="left">
+                <div class="👈 image">
+                    <img src="./main/img/mood/sanp.png" alt="snap">
+                </div>
+                <div class="👈 text">
+                    <span>Snap</span>
+                    <span id="artist">Rosalinn</span>
+                </div>
+                <div class="👈 like">
+                    <img src="./main/img/icon/icons8-heart-60.png" alt="heart">
+                </div>
+            </div>
+
+            <div class="middle">
+                <div class="up">
+                    <button class="👆 shuffle">
+                        <img src="./main/img/icon/icons8-shuffle-96.png" alt="shuffle">
+                    </button>
+                    <button class="👆 backward">
+                        <img src="./main/img/icon/icons8-backward-64.png" alt="back">
+                    </button>
+                    <button class="👆 play">
+                        <img src="./main/img/icon/icons8-play-96.png" alt="play">
+                    </button>
+                    <button class="👆 forward">
+                        <img src="./main/img/icon/icons8-forward-64.png" alt="forward">
+                    </button>
+                    <button class="👆 repeat">
+                        <img src="./main/img/icon/icons8-loop-60.png" alt="repeat">
+                    </button>
+                </div>
+                <div class="down">
+                    <div class="👇 time1"> 0:00 </div>
+                    <div class="👇 bar">
+                        <input type="range" min="0" max="100" value="0" class="slider" id="range">
+                    </div>
+                    <div class="👇 time2">3:00 </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <button class="👉 lyrics">
+                    <img src="./main/img/icon/icons8-lyrics-96.png" alt="lyrics">
+                </button>
+                <button class="👉 queue">
+                    <img src="./main/img/icon/icons8-mic-60.png" alt="queue">
+                </button>
+                <button class="👉 volume">
+                    <img src="./main/img/icon/icons8-speaker-52.png" alt="voice">
+                </button>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+            </div>
+        </div>
+    </body>
+</html>
