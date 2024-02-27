@@ -30,13 +30,29 @@ color: white;}
     
 }
 
+.main .nav1 .navbutton{
+    text-decoration: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+
 .main .nav1{ 
     display: grid;
     grid-template-columns: 1fr auto;
     margin-top: 10px;}
 
 .main .nav1 .left{ margin-left: 20px; }
-.main .nav1 .right{ margin-right: 20px; }
+
+.main .nav1 .right{ 
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
+
 
 .main .nav1 .navbutton{
     text-decoration: none;
@@ -55,6 +71,54 @@ color: white;}
     border: 2px solid rgba(11, 7, 7, 0.5);
 }
 
+/*$ dropdown */
+/* Initially hide the dropdown content */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    left: -160px;
+    top: 30px;
+    z-index: 2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255); 
+    background-color: rgb(31, 31, 31);
+    width: 170px !important;
+    padding: 5px 5px; 
+    text-decoration: none; 
+    display:block;
+    font: 500 15px 'Montserrat', sans-serif;
+}
+
+.dropdown-content a i {
+    position: relative;
+    top: 0; /* Adjust this value as needed */
+}
+
+.arrow1 {
+    margin-left: 79px !important;
+}
+
+.arrow2 {
+    margin-left: 6px;
+}
+
+.drop:hover{
+    background-color: rgba(57, 56, 56);
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
 
 /* ----------------------------------------------------------------sanjal's changes------------------------------------------------------------ */
 
