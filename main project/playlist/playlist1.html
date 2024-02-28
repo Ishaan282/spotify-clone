@@ -1,0 +1,269 @@
+<!-- spotify clone -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Playlist 1</title> <!-- title-->
+        <!-- link to fonts/style-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href = "playlist1.css"> <!-- link to css file-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    </head>
+
+    <body>
+<!--! main -->
+        <div class="main" >
+            <div class="nav">
+                <div class="nav1">
+                    <div class="left">
+                        <a href="#" class="navbutton">
+                            <img src="./main/img/icon/go-back.png" alt="go-back">
+                        </a>
+                        <a href="#" class="navbutton">
+                            <img src="./main/img/icon/go-forwared.png" alt="go-forwared">
+                        </a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="navbutton" id="bell">
+                            <img src="./main/img/icon/icons8-notification-100.png" alt="notification">
+                        </a>
+
+                        <div class="dropdown">
+                            <a href="#" class="navbutton" id="pfp">
+                                <img src="./main/img/icon/pfp.jpg" alt="profile">
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="#" class="drop">Account <i class="fa-solid  fa-arrow-up-right-from-square arrow1"></i></a>
+                                <a href="#" class="drop">Profile</a>
+                                <a href="../premium/premium.html" class="drop">explore premium <i class="fa-solid fa-arrow-up-right-from-square arrow2"></i></a>
+                                <a href="#" class="drop">Settings</a>
+                                <a href="../login.html" style="border-top: 1px solid lightgray;" class="drop">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <!-- ----------------------------------sanjal's changes----------------------------------------------------------------------------------- -->
+
+
+<div class="for-scrollbar" style="overflow-y:auto; overflow-x: hidden;">
+                <div class="container1">
+                    <div class="playlist-title">
+                        <img src=".\main\playlist 1\liked songs.png" alt="album-cover" class="album-cover">
+                    </div>
+
+                    <div class="text"> 
+                        <span class="album">Playlist</span>
+                        <div class="playlist-name"> Liked Songs</div>
+                        <div class="playlist-info">
+                            <div class="img-artist"><img src=".\main\playlist 1\song2.jpeg" alt="" class="artist-picture"></div>
+                            <div class="album-intro"><a href=""class="maker intro" >Annanya</a> 
+                            <span class="making-year intro year-hide" style="display: inline;"> • 2023</span>
+                            <!-- <span class="hidden-date hid">13 October 2023</span> -->
+                            <span class="making-year intro" style="display: inline;"> • 19 songs, 1 hr 56 min</span></div>
+                        </div>
+                        </div>
+                    </div>
+
+                
+                
+
+
+
+    <!--# playlist area -->
+    <div class="container2">
+        <div class="play"><img src=".\main\playlist 1\OIP.png" alt="" class="play-img"></div>
+
+        <div class="like"><i class="fa-regular fa-heart  heart"></i><p class="hid likes-hidden">Save to your library</p></div>
+
+        <div class=""><p class="options hide">• • •</p><p class="hid options-hidden">More options for Fun</p></div>
+
+        <div>
+            <div class="list" onclick="hello();">List <i class="fa-solid fa-list"></i> </div>
+            
+            <div class="list-hidden" id="list-hidden-ok"></div>
+    </div>
+    </div>
+
+            <div class="container3">
+                <div class="numbers">#</div>
+                <div class="title">Title</div>
+                <div class="album">Album</div>
+                <div class="date-added">Date Added</div>
+                <div class="duration"><i class="fa-regular fa-clock"></i></div>
+            </div>
+
+<br>
+            <div class="grid-songs" onmouseover="playbuttonchange('.num1');" onmouseout="playbuttonchangeback('.num1',1)">
+            <div><a href="" class="song-info arrow-cursor num1">1</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song.jpg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Midnights</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Taylor Swift</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">1989(Taylor's Version)</a></div>
+            <div><a href="" class="song-info arrow-cursor">4 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor timetohide" id="myDiv">3:09</a></div>
+        </div><br>
+ 
+        
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num2');" onmouseout="playbuttonchangeback('.num2',2)">
+            <div><a href="" class="song-info arrow-cursor  num2">2</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song2.jpeg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Maroon</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Burna Boy</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">Midnights</a></div>
+            <div><a href="" class="song-info arrow-cursor">9 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">2:49</a></div>
+        </div><br>
+        
+
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num3');" onmouseout="playbuttonchangeback('.num3',3)">
+            <div><a href="" class="song-info arrow-cursor num3">3</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song5.jpg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Red</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Taylor Swift</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">Red</a></div>
+            <div><a href="" class="song-info arrow-cursor">11 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">3:49</a></div>
+        </div><br>
+
+
+        <div class="grid-songs" onmouseover="playbuttonchange('.num4');" onmouseout="playbuttonchangeback('.num4',4)">
+            <div><a href="" class="song-info arrow-cursor num4" >4</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song4.jpeg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Blackbird</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Beatles</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">1989(Taylor's Version)</a></div>
+            <div><a href="" class="song-info arrow-cursor">4 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">2:49</a></div>
+        </div><br>
+
+
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num5');" onmouseout="playbuttonchangeback('.num5',5)">
+            <div><a href="" class="song-info arrow-cursor num5">5</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song6.jpg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Before He Cheats</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Carie Underwood</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">1989(Taylor's Version)</a></div>
+            <div><a href="" class="song-info arrow-cursor">4 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">2:49</a></div>
+        </div><br>
+
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num6');" onmouseout="playbuttonchangeback('.num6',6)">
+            <div><a href="" class="song-info arrow-cursor num6">6</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song.jpg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">style</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Taylor Swift</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">1989(Taylor's Version)</a></div>
+            <div><a href="" class="song-info arrow-cursor">4 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">2:49</a></div>
+        </div><br>
+ 
+        
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num7');" onmouseout="playbuttonchangeback('.num7',7)">
+            <div><a href="" class="song-info arrow-cursor num7">7</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song4.jpeg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Hey Jude</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Beatles</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">Midnights</a></div>
+            <div><a href="" class="song-info arrow-cursor">9 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">2:49</a></div>
+        </div><br>
+        
+
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num8');" onmouseout="playbuttonchangeback('.num8',8)">
+            <div><a href="" class="song-info arrow-cursor num8">8</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song8.jpeg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Halo</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Beyonce</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">Red</a></div>
+            <div><a href="" class="song-info arrow-cursor">11 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">3:49</a></div>
+        </div><br>
+
+
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num9');" onmouseout="playbuttonchangeback('.num9',9)">
+            <div><a href="" class="song-info arrow-cursor num9">9</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song2.jpeg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">old love</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Burna Boy</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">1989(Taylor's Version)</a></div>
+            <div><a href="" class="song-info arrow-cursor">4 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">2:49</a></div>
+        </div><br>
+
+
+        <div class="grid-songs"  onmouseover="playbuttonchange('.num10');" onmouseout="playbuttonchangeback('.num10',10)">
+            <div><a href="" class="song-info arrow-cursor num10">10</a></div>
+            <div class="title-grid">
+                <div><img src=".\main\playlist 1\song1.jpg" alt="" class="song-cover"></div>
+                <div class="names"><div><a href="" class="song">Roman Empror</a></div>
+                <div><a href="" class="artist-name song-info artist-album">Sam Smith</a></div></div>
+            </div>
+            <div><a href="" class="song-info artist-album">1989(Taylor's Version)</a></div>
+            <div><a href="" class="song-info arrow-cursor">4 Days ago</a></div>
+            <div><a href="" class="song-info arrow-cursor">2:49</a></div>
+        </div><br>
+
+
+</div>
+<script>
+// for list
+        function hello(){
+        const x = document.getElementById('list-hidden-ok');
+        
+        if (x.innerHTML === "") {
+            document.querySelector('.list-hidden').innerHTML = (`<div class="hidden">
+                    <p class="pview">View as </p>
+                    <div class="li"> <i class="fa-solid fa-list"></i> List <i class="fa-solid fa-check tick"></i></div>
+                    <div class="compact"> <i class="fa-solid fa-bars"></i> Compact</div>
+                </div>`);
+            document.querySelector('.duration').style.color = "transparent";
+            document.getElementById("myDiv").style.color = "lightblue";
+            document.querySelector('.timetohide').style.color = "transparent";
+        } 
+        else {
+            document.querySelector('.list-hidden').innerHTML = (``);
+            document.querySelector('.duration').style.color = "rgba(255, 255, 255, 0.7)";
+            document.getElementById("myDiv").style.color = "lightblue";
+            document.querySelector('.timetohide').style.color = "transparent";
+        }
+        }
+
+
+// for hover effect oh each indivisual song  
+
+
+
+
+        function playbuttonchange(classname){
+            document.querySelector(classname).innerHTML = (`<i class="fa-solid fa-play"></i>`);
+        }
+
+        function playbuttonchangeback(classname,x){
+            document.querySelector(classname).innerHTML = (`${x}`);
+        }
+
+
+    </script> 
+</html>
