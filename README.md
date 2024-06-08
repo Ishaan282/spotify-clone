@@ -19,7 +19,7 @@ Spotify is a music streaming app that allows users to listen to their favorite m
 - [Ishaan Singla](https://github.com/Ishaan1106)
 - [Samiksha Singh](https://github.com/SamikshaSingh25)
 - [Sameer Chandra](https://github.com/MajesterSmith)
-- [Sanjal] (https://github.com/SanjalJain)
+- [Sanjal](https://github.com/SanjalJain)
 
 ## Installation
 - Clone the repository
