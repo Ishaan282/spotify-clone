@@ -16,7 +16,7 @@ Spotify is a music streaming app that allows users to listen to their favorite m
 - GoogleFonts (for fonts)
 
 ## Team (github links)
-- [Ishaan Singla](https://github.com/Ishaan1106)
+- [Ishaan Singla](https://github.com/Ishaan282)
 - [Samiksha Singh](https://github.com/SamikshaSingh25)
 - [Sameer Chandra](https://github.com/MajesterSmith)
 - [Sanjal](https://github.com/SanjalJain)
